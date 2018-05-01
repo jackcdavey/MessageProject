@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbName = "chatlog";
+$dbName = "chatlaw";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbName", $username, $password);

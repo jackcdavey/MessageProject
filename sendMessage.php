@@ -17,8 +17,7 @@ catch(PDOException $e) {
 }
 
 $sql = "INSERT INTO messages (fromUserName, toUserName, subject, body)
-	VALUES ('".$_POST["fromUserName"]."','".$_POST["toUserName"]."','".$_POST["subject"]."');
-// use exec() because no results are returned
+	VALUES ('".$_POST["fromUserName"]."','".$_POST["toUserName"]."','".$_POST["subject"]."','".$_POST["body"]."')";
 $conn->exec($sql);
 
 ?>
