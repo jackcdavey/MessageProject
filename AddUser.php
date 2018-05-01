@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbName = "chatlaw";
+$dbName = "chatlog";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbName", $username, $password);
@@ -16,7 +16,7 @@ catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
 
-$sql = "INSERT INTO users (username, password, email, firstname, lastname)
+$sql = "INSERT INTO users (username, password, email, firstname, lastname);
 	VALUES ('".$_POST["username"]."','".$_POST["password"]."','".$_POST["email"]."','".$_POST["firstName"]"','".$_POST["lastName"]."');
 // use exec() because no results are returned
 $conn->exec($sql);
